@@ -8,7 +8,7 @@
 --       -> nvim-highlight-colors          [hex colors]
 
 --       ## LSP
---       -> nvim-java                      [java support]
+--       -> nvim-java                      [java support] (disabled)
 --       -> mason-lspconfig                [auto start lsp]
 --       -> nvim-lspconfig                 [lsp configs]
 --       -> mason.nvim                     [lsp package manager]
@@ -169,18 +169,20 @@ return {
 
   --  LSP -------------------------------------------------------------------
 
+  --[[
   -- nvim-java [java support]
   -- https://github.com/nvim-java/nvim-java
   -- Reliable jdtls support. Must go before mason-lspconfig and lsp-config.
   -- NOTE: Let's use our fork until they merge pull request
   --       https://github.com/nvim-java/nvim-java/pull/376
+  --[[
   {
     "zeioth/nvim-java",
     ft = { "java" },
     dependencies = {
       "MunifTanjim/nui.nvim",
       "neovim/nvim-lspconfig",
-      "mfussenegger/nvim-dap",
+     -- "mfussenegger/nvim-dap",
       "mason-org/mason.nvim",
     },
     opts = {
@@ -202,7 +204,7 @@ return {
       },
     },
   },
-
+  ]]
   --  nvim-lspconfig [lsp configs]
   --  https://github.com/neovim/nvim-lspconfig
   --  This plugin provide default configs for the lsp servers available on mason.

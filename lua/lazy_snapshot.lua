@@ -24,6 +24,7 @@ return {
   { "folke/lazy.nvim", version = "^11" },
   { "folke/lazydev.nvim", version = "^2" },
   { "folke/noice.nvim", version = "^4.10" },
+  { "folke/snacks.nvim", commit = "bc0630e43be5699bb94dadc302c0d21615421d93" },
   { "folke/tokyonight.nvim", version = "^5" },
   { "folke/which-key.nvim", version = "^3" },
   { "folke/zen-mode.nvim", version = "^1" },
