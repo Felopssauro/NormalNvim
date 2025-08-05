@@ -4,6 +4,7 @@
 --    Sections:
 --       -> tokyonight                  [theme]
 --       -> astrotheme                  [theme]
+--       -> gruvbox                     [theme]
 --       -> morta                       [theme]
 --       -> eldritch                    [theme]
 --       -> alpha-nvim                  [greeter]
@@ -40,6 +41,14 @@ return {
         keywords = { italic = true },
       },
     }
+  },
+
+  -- gruvbox [theme]
+  -- https://github.com/ellisonleao/gruvbox.nvim
+  {
+    "ellisonleao/gruvbox.nvim",
+    event = "User LoadColorSchemes",
+    opts = {}
   },
 
   --  astrotheme [theme]
@@ -147,20 +156,14 @@ return {
         }
       else
         dashboard.section.header.val = {
-          [[888b      88                                                           88]],
-          [[8888b     88                                                           88]],
-          [[88 `8b    88                                                           88]],
-          [[88  `8b   88   ,adPPYba,   8b,dPPYba,  88,dPYba,,adPYba,   ,adPPYYba,  88]],
-          [[88   `8b  88  a8"     "8a  88P'   "Y8  88P'   "88"    "8a  ""     `Y8  88]],
-          [[88    `8b 88  8b       d8  88          88      88      88  ,adPPPPP88  88]],
-          [[88     `8888  "8a,   ,a8"  88          88      88      88  88,    ,88  88]],
-          [[88      `888   `"YbbdP"'   88          88      88      88  `"8bbdP"Y8  88]],
-          [[                                    __                ]],
-          [[                      ___   __  __ /\_\    ___ ___    ]],
-          [[                    /' _ `\/\ \/\ \\/\ \ /' __` __`\  ]],
-          [[                    /\ \/\ \ \ \_/ |\ \ \/\ \/\ \/\ \ ]],
-          [[                    \ \_\ \_\ \___/  \ \_\ \_\ \_\ \_\]],
-          [[                     \/_/\/_/\/__/    \/_/\/_/\/_/\/_/]],
+          "                                                                     ",
+          "       ████ ██████           █████      ██                     ",
+          "      ███████████             █████                             ",
+          "      █████████ ███████████████████ ███   ███████████   ",
+          "     █████████  ███    █████████████ █████ ██████████████   ",
+          "    █████████ ██████████ █████████ █████ █████ ████ █████   ",
+          "  ███████████ ███    ███ █████████ █████ █████ ████ █████  ",
+          " ██████  █████████████████████ ████ █████ █████ ████ ██████ ",
         }
       end
 
@@ -239,7 +242,7 @@ return {
     event = "User BaseDefered",
     opts = function()
       local fps
-      if is_android then fps = 30 else fps = 244 end
+      if is_android then fps = 30 else fps = 144 end
 
       return {
         timeout = 2500,
